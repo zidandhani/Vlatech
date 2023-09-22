@@ -1,0 +1,224 @@
+*, body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background-image: linear-gradient(to bottom right,rgb(40, 132, 162), aqua);
+}
+
+#chk1 {
+    display: none;
+}
+
+i {
+    color: white;
+    cursor: pointer;   
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 50%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.text-logo {
+    font-family: 'Roboto Mono', monospace;
+    flex: 1;
+    color: white;
+    margin-left: 0px;
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+header .search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: aliceblue;
+    border-radius: 20px;
+    color: gray;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background-color: aqua;
+}
+
+header ul {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.728);
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+header ul li a:hover {
+    font-size: 20px;
+    transition: .3s;
+    color: white;
+}
+
+header .menu {
+    display: none;
+    font-size: 2.5rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500&display=swap');
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('WhatsApp\ Image\ 2023-09-04\ at\ 11.06.09.jpg');
+    -webkit-mask-image: linear-gradient(rgba(0,0,0,1)90%,rgba(0,0,0,0,));
+    mask-image:  linear-gradient(rgb(255, 255, 255)90%,rgba(202, 202, 202, 0));
+  }
+
+.hero .content {
+    padding: 1.4rem 5%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    width: 100%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: rgb(15, 15, 97);
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h1 span {
+    color: rgb rgb(145, 26, 201);
+}
+
+.sec-navbar {
+    width: 100%;
+    height: 1200px;
+    background-color: white;
+    padding: 20px;
+}
+
+.navatas {
+    display: flex;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbawah {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cardnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    box-shadow: 10px 10px 10px #888;
+    margin: 30px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(40, 132, 162);
+}
+
+.cardnav:hover {
+    background-color: rgb(40, 132, 162);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.cardnav i {
+    font-size: 50px;
+}
+
+@media(max-width:1000px) {
+    .search-box button {
+        position: absolute;
+    }
+
+    header ul {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: calc(100vh - 70px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+
+    header .menu {
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+
+    #chk1:checked ~ ul {
+        right: 0;
+    }
+}
+
+@media(max-width:600px) {
+    header .logo {
+        font-size: 10px;
+        margin-left: 8px;
+    }
+
+    header ul {
+        width: 100%;
+    }
+}

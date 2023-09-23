@@ -222,3 +222,10 @@ header .menu {
         width: 100%;
     }
 }
+
+#contact {
+    height: 450px;
+}
+.containercontact {
+    margin-top: 100px;
+}
